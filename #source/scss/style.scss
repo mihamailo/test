@@ -265,8 +265,7 @@ label {
 		width: 100%;
 		a {
 			font-weight: 700;
-			font-size: 14px;
-			color: #fff;
+			@include adaptiv-font(pcSize, mobSize) color: #fff;
 			text-transform: uppercase;
 		}
 	}
