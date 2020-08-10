@@ -43,6 +43,15 @@ li {
   padding: 0;
 }
 
+.form-control,
+.btn {
+  border-radius: 15px;
+}
+
+.form-control {
+  height: 40px;
+}
+
 .btn-reg {
   color: #fff;
   background-color: #541199;
@@ -114,13 +123,32 @@ input[type=checkbox]:checked + label::before {
 }
 
 label {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: #212121;
 }
 
+form .form-group {
+  flex-basis: 0;
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+form .btn-reg {
+  max-width: 400px;
+}
+
+.user-type .form-group {
+  flex-grow: 0;
+  padding-right: 60px;
+}
 .user-type label {
   color: #808080;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 .user-type input:checked ~ label,
 .user-type label:focus {
@@ -169,6 +197,7 @@ label {
 .header__list a {
   font-weight: 700;
   color: #fff;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .header__lock img {
@@ -268,8 +297,59 @@ form {
   transform: rotate(-90deg);
 }
 
-.user-type label {
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
+.accept-check label span {
+  color: #541199;
+}
+
+.form-number {
+  flex: 0 1 32.8571428571%;
+  padding-left: 15px;
+  margin-right: 5.7142857143%;
+}
+
+.form-number-btn {
+  background-color: #fff;
+  width: 100%;
+}
+
+.input-number {
+  flex: 0 1 57.1428571429%;
+  padding-right: 15px;
+}
+
+.dropdown-toggle:after, .dropdown-toggle:before {
+  border: none;
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 2px;
+  background-color: #000;
+  top: 16px;
+  transition: all 0.3s ease;
+}
+.dropdown-toggle:after {
+  right: 13px;
+  transform: rotate(45deg);
+}
+.dropdown-toggle::before {
+  right: 18px;
+  transform: rotate(-45deg);
+}
+
+.show .dropdown-toggle:after {
+  transform: rotate(135deg);
+}
+.show .dropdown-toggle:before {
+  transform: rotate(45deg);
+}
+
+.email-label {
+  font-weight: 500;
+}
+
+.custom-select {
+  border-radius: 15px;
+  position: relative;
+  display: block;
+  background: #fff url("../img/arrow-form.svg") center right 10px no-repeat;
 }
